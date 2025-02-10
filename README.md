@@ -50,7 +50,7 @@ var twoSum = function(nums, target) {
             numToIndex.set(num, i);
         } 
 };
-
+```
 ## Approach 2: Two-pass Hash Table
 ```javascript
 /**
@@ -71,3 +71,4 @@ var twoSum = function(nums, target) {
             numToIndex.set(num, i);
         } 
 };
+```
