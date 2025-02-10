@@ -1,5 +1,5 @@
-# daily-challenge
-# Two Sum
+
+# Day 01 - Two Sum
 
 ## Problem Statement
 Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`.
