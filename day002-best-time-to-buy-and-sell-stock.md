@@ -33,7 +33,7 @@ var maxProfit = function(prices) {
     return maxProfit;
 }
 ```
-## Approach 2: Brute Force 1
+## Approach 2: Brute Force 2
 ```javascript
 /**
  * @param {number[]} prices
