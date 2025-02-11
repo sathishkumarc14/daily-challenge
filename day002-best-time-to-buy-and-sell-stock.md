@@ -14,11 +14,42 @@ Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-
 Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
 
 
-## Approach 1: Brute Force
+## Approach 1: Brute Force 1
+It's getting "Time Limit Exceeded" response while submitting it.
 ```javascript
-
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+var maxProfit = function(prices) {
+    var pricesLength = prices.length;
+    var maxProfit = 0;
+    for(let i = 0; i < pricesLength; i++){  
+        for(let j = i + 1; j < pricesLength; j++){
+            if(maxProfit < (prices[j] - prices[i]))
+                maxProfit = prices[j] - prices[i];
+            }
+        }
+    return maxProfit;
+}
 ```
-## Approach 2: 
+## Approach 2: Brute Force 1
 ```javascript
-
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+var maxProfit = function(prices) {
+    var pricesLength = prices.length;
+    var minPrice = 1/0;
+    var maxProfit = 0;
+    for(let i = 0; i < pricesLength; i++){  
+        if (minPrice > prices[i]) {
+            minPrice = prices[i];
+        } else if ((prices[i] - minPrice) > maxProfit) {
+            maxProfit = prices[i] - minPrice;
+        }        
+    }
+    return maxProfit;
+}  
 ```
