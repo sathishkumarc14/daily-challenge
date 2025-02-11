@@ -26,10 +26,10 @@ var maxProfit = function(prices) {
     var maxProfit = 0;
     for(let i = 0; i < pricesLength; i++){  
         for(let j = i + 1; j < pricesLength; j++){
-            if(maxProfit < (prices[j] - prices[i]))
-                maxProfit = prices[j] - prices[i];
-            }
+            var profit = prices[j] - prices[i];
+            maxProfit = Math.max(maxProfit, profit);
         }
+    }
     return maxProfit;
 }
 ```
