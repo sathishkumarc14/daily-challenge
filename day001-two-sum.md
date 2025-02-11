@@ -27,7 +27,7 @@ Given an array of integers `nums` and an integer `target`, return indices of the
 		}
 	};
 ```
-## Approach 2: Two-pass Hash Table
+## Approach 2: Using Map
 ```javascript
 /**
  * @param {number[]} nums
