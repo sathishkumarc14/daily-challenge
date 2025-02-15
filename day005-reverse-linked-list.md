@@ -44,5 +44,31 @@ var reverseList = function(head) {
 ```
 ## Approach 2: 
 ```javascript
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+var reverseList = function(head) {
+    var arr = [];
+    var cur = head;
+    while(cur){
+        arr.push(cur.val)
+        cur = cur.next
+    }
 
+    var reverse = new ListNode();
+    var pointer = reverse;
+    while(arr.length > 0){
+        pointer.next = new ListNode(arr.pop());
+        pointer = pointer.next; 
+    }
+    return reverse.next;
+};
 ```
