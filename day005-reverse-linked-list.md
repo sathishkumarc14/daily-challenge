@@ -72,7 +72,6 @@ var reverseList = function(head) {
     return reverse.next;
 };
 ```
-
 ## Approach 3: Optimized
 ```javascript
 /**
@@ -92,7 +91,7 @@ var reverseList = function(head) {
     while (current) {
         let next = current.next;  // Store next node
         current.next = prev;      // Reverse current node's pointer to previous
-        
+
         // Move prev and current one step forward
         prev = current;           
         current = next;
