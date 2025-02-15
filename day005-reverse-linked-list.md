@@ -8,10 +8,10 @@ Given the `head` of a singly linked list, reverse the list, and return the rever
 Input: `head = [1,2,3,4,5]`
 Output: `[5,4,3,2,1]`
 
-## Approach 1: Brute force
+## Approach 1: Brute force 1
 1. Traverse through linked list to get all values
 2. Put all values into empty array
-3. Itrate from last index of the array
+3. Itrate from last index of the array (`for loop` or `while loop`)
 4. Create new linked list thorugh array itration
 ```javascript
 /**
@@ -42,7 +42,7 @@ var reverseList = function(head) {
     return reverse.next.next;
 };
 ```
-## Approach 2: 
+## Approach 2: Brute force 2
 ```javascript
 /**
  * Definition for singly-linked list.
@@ -71,4 +71,32 @@ var reverseList = function(head) {
     }
     return reverse.next;
 };
+```
+
+## Approach 3: Optimized
+```javascript
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+var reverseList = function(head) {
+    let prev = null;
+    let current = head;
+    while (current) {
+        let next = current.next;  // Store next node
+        current.next = prev;      // Reverse current node's pointer to previous
+        
+        // Move prev and current one step forward
+        prev = current;           
+        current = next;
+    }
+    return prev;                  // prev will be the new head
+}
 ```
