@@ -9,6 +9,10 @@ Input: `nums = [3,2,3]`
 Output: `3`
 
 ## Approach 1: Brute force
+1. Iterate over given array of numbers
+2. Initialize empty object, it holds the unique number and count of occurance
+3. Update the object based on key and number of occurance
+4. Iterate over object properties and identify the property of higher value
 ```javascript
 /**
  * @param {number[]} nums
