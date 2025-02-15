@@ -5,7 +5,7 @@
 Given an array `nums` of size `n`, return the majority element.
 
 ## Example 1:
-Input: `nums = [3,2,3]`
+Input: `nums = [3,2,3]`   
 Output: `3`
 
 ## Approach 1: Brute force
