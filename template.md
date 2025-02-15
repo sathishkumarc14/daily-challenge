@@ -6,7 +6,7 @@
 ## Example 1:
 
 
-## Approach 1: Linked List
+## Approach 1: Brute force
 ```javascript
 
 ```
