@@ -40,7 +40,28 @@ var majorityElement = function(nums) {
     return Number(max);  
 };
 ```
-## Approach 2: 
+## Approach 2: Boyer-Moore Majority Voting Algorithm
 ```javascript
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var majorityElement = function(nums) {
+    var candidate = 0;
+    var count = 0;
+    
+    for(let i = 0; i < nums.length; i++){
+        if(count == 0){
+            candidate = nums[i];
+        }
+        if(candidate == nums[i]){
+            count += 1;            
+        } else {
+            count -= 1;
+        }
+    }
+    
+    return candidate;
+};
 
 ```
