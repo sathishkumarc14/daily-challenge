@@ -29,6 +29,24 @@ var containsDuplicate = function(nums) {
 };
 ```
 ## Approach 2: 
+1. Using `Set()` to find the dupicates
+2. Itrate over the given array
+3. Get the element from array check is `Set` is having the same value then `true` else add new element in `Set`
 ```javascript
-
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+var containsDuplicate = function(nums) {
+    var seen = new Set();
+    var length = nums.length;
+    for(let i = 0; i < length; i++){
+        if(seen.has(nums[i])){
+            return true;
+        }else{
+            seen.add(nums[i]);
+        }
+    }
+    return false;
+};
 ```
