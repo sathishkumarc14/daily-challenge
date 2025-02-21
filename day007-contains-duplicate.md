@@ -31,7 +31,7 @@ var containsDuplicate = function(nums) {
 ## Approach 2: 
 1. Using `Set()` to find the dupicates
 2. Itrate over the given array
-3. Get the element from array check is `Set` is having the same value then `true` else add new element in `Set`
+3. Get the element from array check `Set` is having the same value then `true` else add new element in `Set`
 ```javascript
 /**
  * @param {number[]} nums
