@@ -14,6 +14,9 @@ Output: `true`
 Explanation: There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed).
 
 ## Approach 1: Brute force
+1. Initialize a `Set` 
+2. Iterate over linked list and put it into Set valriable
+3. On subsequent iteration if the same node is available in `Set` then return `true` else `false`
 ```javascript
 /**
  * Definition for singly-linked list.
