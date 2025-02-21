@@ -46,7 +46,44 @@ var hasCycle = function(head) {
 };
 
 ```
-## Approach 2: 
-```javascript
+## Approach 2: Floyd's Cycle-Finding Algorithm (Tortoise and Hare) algorithm
+## Concept
+Uses two pointers moving at different speeds to identify cycles.
+## Initialization
+- `slow` pointer moves one step at a time.
+- `fast` pointer moves two steps at a time.
+## Traversal
+- In each iteration, move the `slow` pointer by one step.
+- Move the `fast` pointer by two steps.
+## Cycle Detection
+- If `slow` and `fast` pointers meet, a cycle exists.
+- If `fast` reaches the end of the list (`null`), there is no cycle.
 
+```javascript
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+
+/**
+ * @param {ListNode} head
+ * @return {boolean}
+ */
+var hasCycle = function(head) {
+    if(head == null)
+        return false;
+    var slow = head;
+    var fast = head.next;
+    while(fast != null && fast.next != null){
+        if(slow == fast){
+            return true;
+        }
+        var slow = slow.next;
+        var fast = fast.next.next;
+    }
+    return false;
+};
 ```
